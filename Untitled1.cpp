@@ -5,6 +5,7 @@ using namespace std;
 
 double factorial(double n);
 
+
 int main()
 {
     double sum;
