@@ -37,11 +37,11 @@ double cos(double x){
 	while(i < 10){
 		if(i % 2 == 0){
 			sum = sum + ( pangkat(x, i*2) / (double)faktorial(i*2) );
-			printf("Iterasi %d : %lf \t%lf \t\t%.2llu  \n", i, sum, pangkat(x, i*2), faktorial(i*2));
+			printf("Iterasi %d : %lf ", i, sum);
 		}
 		else{
 			sum = sum - ( pangkat(x, i*2) / (double)faktorial(i*2) );
-			printf("Iterasi %d : %lf \t%lf \t\t%.2llu  \n", i, sum, pangkat(x, i*2), faktorial(i*2));
+			printf("Iterasi %d : %lf ", i, sum);
 		}
 		i++;
 	}
