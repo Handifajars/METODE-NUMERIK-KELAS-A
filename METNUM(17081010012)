@@ -12,7 +12,7 @@ int main ()
 	
 	printf(" nilai x (radian) :");
 	scanf("%f",&x);
-	cos = x/1.14;
+	cos = x/3.14;
 	for(int i=1;i<=4;i++,t=-t)
 	{
 		f=f+2;
