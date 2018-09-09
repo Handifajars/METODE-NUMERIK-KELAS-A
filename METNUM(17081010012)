@@ -1,50 +1,24 @@
-#include<iostream>
-#include<cmath>
-
-using namespace std;
-
-double factorial(double n);
+#include <stdio.h>
 
 
-int main()
+int main ()
 {
-    double sum;
-    double x;
-    double term;
-    int i,
-        j,
-        sign;
-    cout << " Cos x menggunakan deret Taylor " << endl;
-    cout << " masukan nilai x = ";
-    cin >> x;
-    sum = 0;
-    i = 2;
-    j = 2;
-    sign = -1;
-    term = 1;
-    sum = 1;
-    do
-    {
-        term = pow(x, i) / (factorial(i));
-        sum = sum + term * sign;
-        i += 2;
-        sign = sign * (-1);
-        j++;
-    } while (term > 0.000001);
-        cout << " Approximate Value of Cos x = " << sum << endl;
-    cout << " Built in Cos(x) Function   = " << cos(x) << endl;
-
-    cout << " Press enter to continue..." << endl;
-    cin.ignore();
-    cin.get();
-    return 0;
-}
-double factorial(double n)
-{
-    double fact = 1;
-    for (int i = 1; i <= n; i++)
-    {
-        fact *= i;
-    }
-    return fact;
+	float x,hasil,temp,cos;
+	int f=0;
+	int t= -1;
+	int has = 1;
+	hasil = 1;
+	temp = 1 ;
+	
+	printf(" nilai x (radian) :");
+	scanf("%f",&x);
+	cos = x/1.14;
+	for(int i=1;i<=4;i++,t=-t)
+	{
+		f=f+2;
+        temp = temp*((x*x)/(f*(f-1)));
+        hasil = hasil + (t*temp);
+	}
+	printf("cos x = %2.0f adalah hasilnya : %f",cos*180,hasil*-1);
+	//1.57142857//
 }
