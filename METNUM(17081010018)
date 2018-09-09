@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int faktorial(int a)
+{
+if (a==0) return 1;
+else
+return a*faktorial(a-1); 
+}
+float cos_taylor(float nilaix, int batas)
+{
+        float hasil = 1;
+        int tanda = -1, i=0;
+        float temp =1;
+        for(int b=1 ; b<batas ; b++,tanda=-tanda)
+		// fungsi batas agar hasil yang didapatkan semakin akurat //
+        {
+            i+=2;
+            temp *=(nilaix*nilaix)/(i*(i-1));
+            hasil += tanda*temp;
+        }
+        return hasil;
+}
+int main(){
+	
+printf("======================================================================================================================\n");
+printf("                                               MENGHITUNG PROGRAM APROKSIMASI                                         \n");
+printf("                                             by : Brenda Clarinta - 17081010018                                       \n");
+printf("======================================================================================================================\n");
+
+	int nilaix, batas;
+		printf("Masukkan nilai x dalam radian : ");
+		scanf("%d", &nilaix);
+		printf("(semakin besar batas semakin akurat)\n");
+		printf("Masukkan batas : ");
+		scanf("%d", &batas);
+		printf("\n Nilai Cos dari %d adalah %f .\n\n", nilaix, cos_taylor(nilaix, batas)); 
+}
