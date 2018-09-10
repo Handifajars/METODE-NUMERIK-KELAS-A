@@ -19,6 +19,6 @@ int main ()
         temp = temp*((x*x)/(f*(f-1)));
         hasil = hasil + (t*temp);
 	}
-	printf("cos x = %2.0f adalah hasilnya : %f",cos*180,hasil*-1);
+	printf("cos x = %2.0f adalah hasilnya : %f",cos*180,hasil);
 	//1.57142857//
 }
